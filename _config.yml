@@ -69,8 +69,13 @@ author:
     linkedin: ""
 
 exclude:
+  - .bundle
+  - .github
+  - .gitignore
+  - .ruby-version
+  - vendor
+  - node_modules
   - README.md
   - Gemfile
   - Gemfile.lock
   - academic-website-build-checklist.md
-
