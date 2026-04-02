@@ -1,0 +1,76 @@
+title: "Your Name"
+email: "your.email@example.com"
+description: "Academic personal website for research, publications, teaching, and projects."
+url: "https://yourusername.github.io"
+baseurl: ""
+timezone: "Asia/Shanghai"
+markdown: kramdown
+permalink: pretty
+
+collections:
+  publications:
+    output: true
+    permalink: /publications/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
+  talks:
+    output: true
+    permalink: /talks/:path/
+  teaching:
+    output: true
+    permalink: /teaching/:path/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: item
+      section: publications
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: item
+      section: projects
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: item
+      section: talks
+  - scope:
+      path: ""
+      type: teaching
+    values:
+      layout: item
+      section: teaching
+
+author:
+  name: "Your Name"
+  title: "PhD Student / Researcher"
+  affiliation: "Your Institution"
+  location: "City, Country"
+  bio: "I work on machine learning, systems, and human-centered computing."
+  research_interests:
+    - "Research area one"
+    - "Research area two"
+    - "Research area three"
+  social:
+    email: "your.email@example.com"
+    github: "yourgithub"
+    scholar: ""
+    orcid: ""
+    linkedin: ""
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - academic-website-build-checklist.md
+

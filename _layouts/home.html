@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">{{ site.author.title }}</p>
+      <h1>{{ site.author.name }}</h1>
+      <p class="lead">{{ site.author.bio }}</p>
+      <p class="meta">
+        {% if site.author.affiliation %}{{ site.author.affiliation }}{% endif %}
+        {% if site.author.location %} · {{ site.author.location }}{% endif %}
+      </p>
+      <div class="hero-links">
+        <a class="button" href="{{ '/cv/' | relative_url }}">View CV</a>
+        <a class="button button-secondary" href="{{ '/publications/' | relative_url }}">Publications</a>
+      </div>
+    </div>
+    <aside class="profile-card">
+      <h2>Research Interests</h2>
+      <ul>
+        {% for item in site.author.research_interests %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="wrap narrow">
+    <div class="page-content">
+      {{ content }}
+    </div>
+  </div>
+</section>
+
