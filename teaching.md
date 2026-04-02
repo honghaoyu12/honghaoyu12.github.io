@@ -8,16 +8,21 @@ Use this page for courses, tutorials, and mentorship-related teaching work. If t
 
 <div class="collection-list">
   {% assign items = site.teaching | sort: "date" | reverse %}
-  {% for item in items %}
-    <article class="collection-item">
-      <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
-      <p class="collection-meta">
-        {% if item.role %}{{ item.role }}{% endif %}
-        {% if item.role and item.term %} · {% endif %}
-        {% if item.term %}{{ item.term }}{% endif %}
-      </p>
-      <p>{{ item.summary }}</p>
-    </article>
-  {% endfor %}
+  {% if items.size > 0 %}
+    {% for item in items %}
+      <article class="collection-item">
+        <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
+        <p class="collection-meta">
+          {% if item.role %}{{ item.role }}{% endif %}
+          {% if item.role and item.term %} · {% endif %}
+          {% if item.term %}{{ item.term }}{% endif %}
+        </p>
+        <p>{{ item.summary }}</p>
+      </article>
+    {% endfor %}
+  {% else %}
+    <div class="collection-item collection-empty">
+      <p>Teaching experience will appear here once it is added.</p>
+    </div>
+  {% endif %}
 </div>
-

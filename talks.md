@@ -8,17 +8,22 @@ List invited talks, conference talks, and workshops here. Later we can add slide
 
 <div class="collection-list">
   {% assign items = site.talks | sort: "date" | reverse %}
-  {% for item in items %}
-    <article class="collection-item">
-      <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
-      <p class="collection-meta">
-        {% if item.venue %}{{ item.venue }}{% endif %}
-        {% if item.venue and item.location %} · {% endif %}
-        {% if item.location %}{{ item.location }}{% endif %}
-        {% if item.date %} · {{ item.date | date: "%B %Y" }}{% endif %}
-      </p>
-      <p>{{ item.summary }}</p>
-    </article>
-  {% endfor %}
+  {% if items.size > 0 %}
+    {% for item in items %}
+      <article class="collection-item">
+        <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
+        <p class="collection-meta">
+          {% if item.venue %}{{ item.venue }}{% endif %}
+          {% if item.venue and item.location %} · {% endif %}
+          {% if item.location %}{{ item.location }}{% endif %}
+          {% if item.date %} · {{ item.date | date: "%B %Y" }}{% endif %}
+        </p>
+        <p>{{ item.summary }}</p>
+      </article>
+    {% endfor %}
+  {% else %}
+    <div class="collection-item collection-empty">
+      <p>Talks and presentations will appear here once they are added.</p>
+    </div>
+  {% endif %}
 </div>
-

@@ -9,7 +9,7 @@ You can use this page to describe your research agenda in plain language, point 
 
 ## Selected Work
 
-Below are starter examples pulled from the content collections. Replace them with your own material as we customize the site.
+Selected publications and projects will appear here as they are added.
 
 {% assign featured_publications = site.publications | sort: "date" | reverse | slice: 0, 3 %}
 {% if featured_publications.size > 0 %}
@@ -26,5 +26,8 @@ Below are starter examples pulled from the content collections. Replace them wit
     </article>
   {% endfor %}
 </div>
+{% else %}
+<div class="collection-item collection-empty">
+  <p>No publications have been added yet.</p>
+</div>
 {% endif %}
-
