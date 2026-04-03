@@ -52,17 +52,17 @@ defaults:
       section: teaching
 
 author:
-  name: "Your Name"
-  title: "PhD Student / Researcher"
+  name: "Honghao Yu"
+  title: "Algorithmic Researcher"
   affiliation: "Your Institution"
-  location: "City, Country"
+  location: "Shenzhen, China"
   bio: "I work on machine learning, systems, and human-centered computing."
   research_interests:
     - "Research area one"
     - "Research area two"
     - "Research area three"
   social:
-    email: "your.email@example.com"
+    email: "honghao.yu.12@gmail.com"
     github: "yourgithub"
     scholar: ""
     orcid: ""
