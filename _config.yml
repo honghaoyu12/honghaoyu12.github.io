@@ -56,16 +56,16 @@ author:
   title: "Algorithmic Researcher"
   affiliation: "Your Institution"
   location: "Shenzhen, China"
-  bio: "I work on machine learning, systems, and human-centered computing."
+  bio: "I have worked on statistical physics, in particular, phase transitions and critical dynamics. Currently, I'm working on optimization, large language models and various machine learning algorithms"
   research_interests:
-    - "Research area one"
-    - "Research area two"
-    - "Research area three"
+    - "Interactive particle systems"
+    - "Non-equilibrium phase transitions"
+    - "Optimization algorithms"
   social:
     email: "honghao.yu.12@gmail.com"
     github: "yourgithub"
-    scholar: ""
-    orcid: ""
+    scholar: "https://scholar.google.com/citations?user=QPgwKbwAAAAJ&hl=en"
+    orcid: "https://orcid.org/my-orcid?orcid=0000-0002-9317-0433"
     linkedin: ""
 
 exclude:
